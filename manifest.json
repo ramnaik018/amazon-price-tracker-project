@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Amazon Price Tracker",
+  "description": "A Amazon price tracker extension!",
+  "version": "1.0",
+  "icons": {
+    "128": "imgs/logo128.png",
+    "48": "imgs/logo48.png",
+    "16": "imgs/logo16.png"
+  },
+  "browser_action": {
+    "default_icon": "imgs/logo16.png",
+    "default_popup": "popup.html"
+  },
+  
+
+  "content_scripts":[
+    {
+      "matches":[
+        "<all_urls>"
+      ],
+      "js":["Scripts/angular.min.js","popup.js","content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["Scripts/jquery-3.1.0.min.js","background.js"]
+  }
+}
